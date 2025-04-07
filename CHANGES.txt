@@ -4,3 +4,6 @@
 - initialized project structure
 - created folders: /data/,/scripts/,/outputs/,/dashboard/,/docs/
 - added initial README.md and CHANGES.txt
+- created sources.md
+- organized raw data files
+- fixed data folder structure
