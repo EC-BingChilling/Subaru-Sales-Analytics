@@ -1,0 +1,6 @@
+# Project Changelog - Subaru Sales Analytics
+
+## April 6, 2025
+- initialized project structure
+- created folders: /data/,/scripts/,/outputs/,/dashboard/,/docs/
+- added initial README.md and CHANGES.txt
