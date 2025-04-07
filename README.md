@@ -6,7 +6,7 @@ This project analyzes Subaru vehicle sales data to explore trends, variablility,
 - `/data/` - Subaru sales data files (CSV format)
 - `/scripts/` - R scripts for data analysis and visualization
 - `/outputs/` - Generated plots and summary tables
-= `/dashboard/` - R markdown / flexdashboard files
+- `/dashboard/` - R markdown / flexdashboard files
 - `/docs/` - final HTML dashboard for Github Pages
 
 # Tools used
