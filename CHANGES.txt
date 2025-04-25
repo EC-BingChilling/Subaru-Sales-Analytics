@@ -7,3 +7,9 @@
 - created sources.md
 - organized raw data files
 - fixed data folder structure
+
+## April 25, 2025
+- Cleaned and saved Subaru global 2024 sales Excel data to CSV
+- Extracted Subaru U.S. December 2024 sales and saved as CSV
+- Extracted U.S. year-end 2024 model sales and saved as CSV
+- Ensured all data files were stored in standardized /data/raw and /data/processed structure

@@ -1,5 +1,4 @@
 # Subaru Sales Analytics Dashboard
-
 This project analyzes Subaru vehicle sales data to explore trends, variablility, and statistical insights. The goal is to build an interactive data visualization dashboard hosted on Github Pages.
 
 # Project Structure 
@@ -14,17 +13,17 @@ This project analyzes Subaru vehicle sales data to explore trends, variablility,
 - flexdashboard / R markdown
 - Github Pages
 - Assistance from ChatGPT
-[
+
 ## Project Status
-- setup Complete
-- directory structure setup
-- preparing intitial data import
+- ✅ Setup complete
+- ✅ File structure finalized
+- ✅ All data imported and cleaned
 
 ## Next steps
-- [x] Add subaru sales dataset to `/data/`
-- [ ] write intitial R script to load and plot data
-- [ ] Build first dashboard draft
-- [ ] Deploy via Github pages
+- [ ] Write R script to load and visualize sales data
+- [ ] Build interactive dashboard using flexdashboard
+- [ ] Deploy dashboard to GitHub Pages
+
 
 ## Credits
 
