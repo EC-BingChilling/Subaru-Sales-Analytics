@@ -22,8 +22,13 @@ This project analyzes Subaru vehicle sales data to explore trends, variablility,
 ## Next steps
 - [x] Write R script to load and visualize sales data
 - [x] Build interactive dashboard using flexdashboard
-- [ ] Deploy dashboard to GitHub Pages
+- [x] Deploy dashboard to GitHub Pages
 
+✅ Project Features
+- Interactive visualizations with plotly
+- Statistical summaries (mean, median, SD, etc.)
+- Comparison chart for Forester (U.S. vs Global)
+- Organized GitHub repo for collaboration
 
 ## Credits
 
