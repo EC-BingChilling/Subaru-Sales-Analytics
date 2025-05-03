@@ -13,3 +13,10 @@
 - Extracted Subaru U.S. December 2024 sales and saved as CSV
 - Extracted U.S. year-end 2024 model sales and saved as CSV
 - Ensured all data files were stored in standardized /data/raw and /data/processed structure
+
+## May 3, 2025
+- Created flexdashboard with three visualizations:
+  - Global model sales (Chart A)
+  - U.S. model sales (Chart B)
+  - Forester U.S. vs Global comparison (Chart C)
+- Fixed file path issue for CSV data access

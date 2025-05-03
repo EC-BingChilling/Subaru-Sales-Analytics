@@ -21,7 +21,7 @@ This project analyzes Subaru vehicle sales data to explore trends, variablility,
 
 ## Next steps
 - [x] Write R script to load and visualize sales data
-- [ ] Build interactive dashboard using flexdashboard
+- [x] Build interactive dashboard using flexdashboard
 - [ ] Deploy dashboard to GitHub Pages
 
 
