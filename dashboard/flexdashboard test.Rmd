@@ -1,0 +1,77 @@
+---
+title: "Subaru Sales Analytics Dashboard"
+author: "Eva Chen, Krupa Patel"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+library(readr)
+library(dplyr)
+```
+
+Column {data-width=300}
+-----------------------------------------------------------------------
+
+### Global Model Sales 
+
+```{r}
+data <- read_csv("../data/processed/subaru-global-sales-2024.csv") %>%
+  mutate(model = reorder(model, sales_2024_thousands))
+
+ggplot(data, aes(x = sales_2024_thousands, y = model)) +
+  geom_col(fill = "#4472C4") +
+  labs(
+    x = "Sales (in thousands)",
+    y = "Model"
+  ) +
+  theme_minimal()
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### U.S. Model Sales 
+
+```{r}
+us <- read_csv("../data/processed/usa-subaru-sales-2024.csv") %>%
+  filter(model != "TOTAL") %>%
+  mutate(model = reorder(model, ytd_2024))
+
+ggplot(us, aes(x = ytd_2024, y = model)) +
+  geom_col(fill = "#70AD47") +
+  labs(
+    x = "YTD Sales (units)",
+    y = "Model"
+  ) +
+  theme_minimal()
+```
+
+### Forester: U.S. vs Global  
+
+```{r}
+# Compare global and US sales for Forester
+global_val <- data %>% filter(model == "Forester") %>% pull(sales_2024_thousands) * 1000
+us_val <- us %>% filter(model == "Forester") %>% pull(ytd_2024)
+
+df <- tibble(
+  Market = c("Global", "U.S."),
+  Sales = c(global_val, us_val)
+)
+
+ggplot(df, aes(x = Market, y = Sales, fill = Market)) +
+  geom_col(show.legend = FALSE) +
+  labs(
+    title = "Forester Sales: U.S. vs Global",
+    y = "Units Sold",
+    x = ""
+  ) +
+  scale_y_continuous(labels = scales::comma) +  # 👈 ADD HERE
+  scale_fill_manual(values = c("Global" = "#4472C4", "U.S." = "#70AD47")) +
+  theme_minimal()
+
+```
