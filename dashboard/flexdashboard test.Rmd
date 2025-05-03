@@ -12,6 +12,7 @@ library(flexdashboard)
 library(ggplot2)
 library(readr)
 library(dplyr)
+library(plotly)
 ```
 
 Column {data-width=300}
@@ -23,13 +24,14 @@ Column {data-width=300}
 data <- read_csv("../data/processed/subaru-global-sales-2024.csv") %>%
   mutate(model = reorder(model, sales_2024_thousands))
 
-ggplot(data, aes(x = sales_2024_thousands, y = model)) +
+p <- ggplot(data, aes(x = sales_2024_thousands, y = model)) +
   geom_col(fill = "#4472C4") +
   labs(
     x = "Sales (in thousands)",
     y = "Model"
   ) +
   theme_minimal()
+ggplotly(p)
 ```
 
 Column {data-width=350}
@@ -42,13 +44,14 @@ us <- read_csv("../data/processed/usa-subaru-sales-2024.csv") %>%
   filter(model != "TOTAL") %>%
   mutate(model = reorder(model, ytd_2024))
 
-ggplot(us, aes(x = ytd_2024, y = model)) +
+p <- ggplot(us, aes(x = ytd_2024, y = model)) +
   geom_col(fill = "#70AD47") +
   labs(
     x = "YTD Sales (units)",
     y = "Model"
   ) +
   theme_minimal()
+ggplotly(p)
 ```
 
 ### Forester: U.S. vs Global  
@@ -63,7 +66,7 @@ df <- tibble(
   Sales = c(global_val, us_val)
 )
 
-ggplot(df, aes(x = Market, y = Sales, fill = Market)) +
+p <- ggplot(df, aes(x = Market, y = Sales, fill = Market)) +
   geom_col(show.legend = FALSE) +
   labs(
     title = "Forester Sales: U.S. vs Global",
@@ -73,5 +76,23 @@ ggplot(df, aes(x = Market, y = Sales, fill = Market)) +
   scale_y_continuous(labels = scales::comma) +  # 👈 ADD HERE
   scale_fill_manual(values = c("Global" = "#4472C4", "U.S." = "#70AD47")) +
   theme_minimal()
+ggplotly(p)
+```
+Column {data-width=450}
+-----------------------------------------------------------------------
 
+### Global Sales Summary
+
+```{r}
+# Summary statistics
+summary_stats <- data %>%
+  summarise(
+    mean_sales = mean(sales_2024_thousands),
+    median_sales = median(sales_2024_thousands),
+    sd_sales = sd(sales_2024_thousands),
+    max_sales = max(sales_2024_thousands),
+    min_sales = min(sales_2024_thousands)
+  )
+
+summary_stats
 ```
