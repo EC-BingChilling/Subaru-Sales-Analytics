@@ -25,3 +25,9 @@
 - Rendered dashboard HTML manually using rmarkdown::render()
 - Removed dashboard.sh script and commit guide markdown
 - Successfully deployed live dashboard via GitHub Pages
+
+## May 4, 2025
+- Added interactive boxplot for global sales distribution
+- Included explanation of distributional assumption
+- Finalized dashboard layout and styling
+- Completed and deployed final version to GitHub Pages

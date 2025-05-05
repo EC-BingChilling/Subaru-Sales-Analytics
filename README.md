@@ -22,7 +22,9 @@ This project analyzes Subaru vehicle sales data to explore trends, variablility,
 ## Next steps
 - [x] Write R script to load and visualize sales data
 - [x] Build interactive dashboard using flexdashboard
-- [x] Deploy dashboard to GitHub Pages
+- [x] Added plotly interactive elements for global/US sales and distribution  
+- [x] Included boxplot and explanation of distributional assumptions  
+- [x] Completed final deployment to GitHub Pages  
 
 ✅ Project Features
 - Interactive visualizations with plotly
@@ -35,3 +37,8 @@ This project analyzes Subaru vehicle sales data to explore trends, variablility,
 - Subaru U.S. Media Center: [Link](https://media.subaru.com/pressrelease/2265/subaru-america-reports-december-sales-up-7.1-percent)
 - Car Sales Statistics: [Link](https://www.goodcarbadcar.net/2024-us-subaru-sales-figures/)
 - Statista: Subaru Global Sales 2024 (via downloaded file)
+
+## 📊 Live Dashboard
+
+View the live Subaru Sales Analytics Dashboard here:  
+[https://ec-bingchilling.github.io/Subaru-Sales-Analytics/](https://ec-bingchilling.github.io/Subaru-Sales-Analytics/)
